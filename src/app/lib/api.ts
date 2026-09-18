@@ -1,4 +1,4 @@
-const API_BASE_URL = 'https://edu-back-z0um.onrender.com';
+const API_BASE_URL = 'https://avia-back.onrender.com';
 
 export type ApiId = string | number;
 
