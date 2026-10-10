@@ -29,14 +29,14 @@ const DAY_LABELS: Record<ScheduleDay['day'], string> = {
   saturday: 'Samedi',
 };
 
-const YEAR_OPTIONS: YearLevel[] = ['1st', '2nd'];
+const YEAR_OPTIONS: YearLevel[] = ['1ere', '2ème'];
 const CLASS_OPTIONS: ClassGroup[] = ['A', 'B'];
 
 // Normalize a free-form year value to the API's expected "1st" | "2nd" (lowercase, no leading zero).
 const normalizeYearLevel = (value: string): YearLevel | null => {
   const v = String(value ?? '').trim().toLowerCase();
-  if (v === '1st' || v === '1' || v === '1ere' || v === '1ère') return '1st';
-  if (v === '2nd' || v === '2' || v === '2eme' || v === '2ème') return '2nd';
+  if (v === '1ere' || v === '1' || v === '1ere' || v === '1ère') return '1ere';
+  if (v === '2ème' || v === '2' || v === '2eme' || v === '2ème') return '2ème';
   return null;
 };
 
