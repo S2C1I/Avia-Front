@@ -38,12 +38,11 @@ export function SidebarV2({ currentPage, onNavigate }: SidebarV2Props) {
     <aside className="w-72 flex flex-col h-full shadow-2xl" style={{ background: '#0d1b2a' }}>
       {/* Logo / Brand */}
       <div className="p-6 border-b border-white/10">
-        <div className="flex items-center gap-3 mb-1">
-          <div>
+        <div className="flex items-center justify-center gap-3 mb-1">
             <h1 className="text-white text-lg tracking-widest uppercase" style={{ fontFamily: 'Georgia, serif', fontWeight: 700, letterSpacing: '0.12em' }}>
               APIFSA
             </h1>
-          </div>
+
         </div>
         <div className="mt-4 h-px bg-gradient-to-r from-transparent via-white/20 to-transparent" />
       </div>
