@@ -39,17 +39,10 @@ export function SidebarV2({ currentPage, onNavigate }: SidebarV2Props) {
       {/* Logo / Brand */}
       <div className="p-6 border-b border-white/10">
         <div className="flex items-center gap-3 mb-1">
-          <div className="w-12 h-12 rounded-xl flex items-center justify-center shadow-lg overflow-hidden"
-            style={{ background: 'linear-gradient(135deg, #006233 0%, #00844a 100%)' }}>
-            <span className="text-white font-black text-lg tracking-wider" style={{ fontFamily: 'Georgia, serif' }}>AÉ</span>
-          </div>
           <div>
             <h1 className="text-white text-lg tracking-widest uppercase" style={{ fontFamily: 'Georgia, serif', fontWeight: 700, letterSpacing: '0.12em' }}>
-              Aviation École
+              APIFSA
             </h1>
-            <p className="text-[#C1272D] text-xs tracking-widest uppercase font-medium" style={{ letterSpacing: '0.15em' }}>
-              École Supérieure
-            </p>
           </div>
         </div>
         <div className="mt-4 h-px bg-gradient-to-r from-transparent via-white/20 to-transparent" />
