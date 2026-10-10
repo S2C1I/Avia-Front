@@ -22,13 +22,13 @@ export function Accueil() {
     <div className="p-8 space-y-8">
       <div className="flex items-center justify-between">
         <div>
-          <h1 className="text-3xl font-bold text-foreground mb-2">Bienvenue sur Aviation École</h1>
-          <p className="text-slate-600">Tableau de bord général - Lundi 25 Mai 2026</p>
+          <h1 className="text-3xl font-bold text-foreground mb-2">Bienvenue</h1>
+          <p className="text-slate-600">Tableau de bord général</p>
         </div>
         <div className="flex items-center gap-4">
           <div className="text-right">
             <p className="text-slate-600 text-sm">Année Académique</p>
-            <p className="text-foreground font-semibold">2025-2026</p>
+            <p className="text-foreground font-semibold">2026-2027</p>
           </div>
         </div>
       </div>
