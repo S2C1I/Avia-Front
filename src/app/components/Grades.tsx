@@ -3,6 +3,18 @@ import { BookOpen, ChevronDown, RefreshCcw, Save, Users } from 'lucide-react';
 import { api, normalizeApiId, type GradePayload, type GradeRecord, type ProgramRecord, type StudentRecord, type SubjectRecord } from '../lib/api';
 
 const fallbackYearLevels = ['1st', '2nd', '3rd', '4th'];
+const yearLabels: Record<string, string> = {
+  '1st': '1ère année',
+  '2nd': '2ème année',
+  '3rd': '3ème année',
+  '4th': '4ème année',
+  '1ere': '1ère année',
+  '1ère': '1ère année',
+  '2eme': '2ème année',
+  '2ème': '2ème année',
+};
+
+const getYearLabel = (value: string): string => yearLabels[value] ?? value;
 
 const normalizeProgram = (entry: any) => ({
   ...entry,
@@ -361,7 +373,7 @@ export function Grades() {
           label="Année"
           value={selectedYearLevel}
           onChange={setSelectedYearLevel}
-          options={yearOptions.map((year) => ({ value: year, label: year }))}
+          options={yearOptions.map((year) => ({ value: year, label: getYearLabel(year) }))}
           disabled={yearOptions.length === 0}
         />
 
@@ -389,7 +401,7 @@ export function Grades() {
           <div>
             <h3 className="text-lg font-bold text-[#0d1b2a]" style={{ fontFamily: 'Georgia, serif' }}>Table des étudiants</h3>
             <p className="text-xs text-slate-400 mt-0.5">
-              {selectedProgram?.name ?? 'Toutes les filières'} • {selectedYearLevel || 'Toutes les années'} • {selectedClassGroup || 'Toutes les classes'}
+              {selectedProgram?.name ?? 'Toutes les filières'} • {selectedYearLevel ? getYearLabel(selectedYearLevel) : 'Toutes les années'} • {selectedClassGroup || 'Toutes les classes'}
             </p>
           </div>
           <div className="flex items-center gap-2">
