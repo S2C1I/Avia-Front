@@ -375,7 +375,7 @@ export function Students({ onSelectStudent }: StudentsProps) {
                       </div>
                       <div className="flex items-center gap-1.5 text-slate-500">
                         <Phone className="w-3.5 h-3.5 text-slate-400" />
-                        <span className="font-medium">Parent :</span> {typeof student.parent === 'object' ? (student.parent as any).phone ?? (student.parent as any).fullName ?? 'N/A' : String(student.parent ?? 'N/A')}
+                        <span className="font-medium">Email :</span>  {student.email}
                       </div>
                     </div>
                   </td>
