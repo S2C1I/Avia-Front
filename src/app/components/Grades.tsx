@@ -417,7 +417,7 @@ export function Grades() {
             <thead style={{ background: '#0d1b2a' }}>
               <tr>
                 <th className="px-6 py-4 text-xs font-semibold uppercase text-white/80 tracking-wider">Nom</th>
-                <th className="px-6 py-4 text-xs font-semibold uppercase text-white/80 tracking-wider">CNE</th>
+                <th className="px-6 py-4 text-xs font-semibold uppercase text-white/80 tracking-wider">CIN</th>
                 <th className="px-6 py-4 text-xs font-semibold uppercase text-white/80 tracking-wider">Note /20</th>
                 <th className="px-6 py-4 text-right text-xs font-semibold uppercase text-white/80 tracking-wider rounded-tr-2xl">Statut</th>
               </tr>
@@ -459,7 +459,7 @@ export function Grades() {
                         </div>
                         <div>
                           <p className="font-semibold text-[#0e1f12]">{student.fullName}</p>
-                          <p className="text-[11px] font-mono text-slate-400 mt-0.5">CNE: {student.cne || 'N/A'}</p>
+                          <p className="text-[11px] font-mono text-slate-400 mt-0.5">CIN: {student.cne || 'N/A'}</p>
                         </div>
                       </div>
                     </td>
