@@ -134,7 +134,7 @@ export function Professeurs() {
       <div className="flex items-center justify-between">
         <div>
           <h1 className="text-2xl text-[#0e1f12]" style={{ fontFamily: 'Georgia, serif', fontWeight: 700 }}>Corps Enseignant</h1>
-          <p className="text-slate-500 text-sm mt-1">Gestion et suivi des professeurs via l'API</p>
+          <p className="text-slate-500 text-sm mt-1">Gestion et suivi des professeurs</p>
         </div>
         <button
           onClick={() => { setEditingTeacher(null); setShowAddModal(true); }}
