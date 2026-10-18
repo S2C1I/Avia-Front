@@ -39,9 +39,9 @@ export function SidebarV2({ currentPage, onNavigate }: SidebarV2Props) {
       {/* Logo / Brand */}
       <div className="p-6 border-b border-white/10">
         <div className="flex items-center justify-center gap-3 mb-1">
-            <h1 className="text-white text-lg tracking-widest uppercase" style={{ fontFamily: 'Georgia, serif', fontWeight: 700, letterSpacing: '0.12em' }}>
-              <img src="/APIFSA.jpeg" alt="APIFSA Logo" className="w-8 h-8 rounded-full" style={{ objectFit: 'cover' }} />
-            </h1>
+
+              <img src="/APIFSA.jpeg" alt="APIFSA Logo" id='apifsa' style={{ objectFit: 'cover' }} />
+
 
         </div>
         <div className="mt-4 h-px bg-gradient-to-r from-transparent via-white/20 to-transparent" />
