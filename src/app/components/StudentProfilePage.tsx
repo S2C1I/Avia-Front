@@ -536,7 +536,7 @@ export function StudentProfilePage({ studentId, onBack, onUpdateStudent }: Stude
           <InfoCard icon={<Phone className="w-4 h-4" />} label="Téléphone portable" value={currentStudentData.phone} />
           <InfoCard icon={<Calendar className="w-4 h-4" />} label="Année" value={currentStudentData.yearLevel === '1st' ? '1ère année' : currentStudentData.yearLevel === '2nd' ? '2ème année' : currentStudentData.yearLevel} />
           <InfoCard icon={<Award className="w-4 h-4" />} label="Spécialité / Track" value={currentStudentData.track} />
-          <InfoCard icon={<FileText className="w-4 h-4" />} label="Code National (CNE)" value={currentStudentData.cne} />
+          <InfoCard icon={<FileText className="w-4 h-4" />} label="CIN" value={currentStudentData.cne} />
           <InfoCard icon={<Users className="w-4 h-4" />} label="Classe" value={currentStudentData.classGroup} />
           <InfoCard icon={<Home className="w-4 h-4" />} label="Adresse" value={currentStudentData.adresse} />
           <InfoCard icon={<User className="w-4 h-4" />} label="Tuteur légal (Parent)" value={currentStudentData.parentName} />
@@ -661,7 +661,7 @@ export function StudentProfilePage({ studentId, onBack, onUpdateStudent }: Stude
               </div>
 
               <div className="flex flex-col gap-1.5">
-                <label className="text-[10px] font-bold text-slate-400 uppercase tracking-wider">CNE</label>
+                <label className="text-[10px] font-bold text-slate-400 uppercase tracking-wider">CIN</label>
                 <input
                   name="cne"
                   type="text"

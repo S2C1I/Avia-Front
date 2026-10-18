@@ -273,7 +273,6 @@ export function Students({ onSelectStudent }: StudentsProps) {
           <h2 className="text-3xl font-bold tracking-tight text-[#0e1f12]" style={{ fontFamily: 'Georgia, serif' }}>
             Étudiants
           </h2>
-          <p className="text-slate-500 text-sm mt-1">Connecté au backend sur http://localhost:5000</p>
         </div>
         <div className="flex items-center gap-3 flex-wrap">
           <select
@@ -292,7 +291,7 @@ export function Students({ onSelectStudent }: StudentsProps) {
             <Search className="absolute left-3.5 top-1/2 -translate-y-1/2 w-4 h-4 text-slate-400" />
             <input
               type="text"
-              placeholder="Rechercher un étudiant, CNE, email..."
+              placeholder="Rechercher un étudiant, CIN, email..."
               value={searchTerm}
               onChange={(e) => setSearchTerm(e.target.value)}
               className="pl-10 pr-4 py-2 w-64 bg-white text-slate-800 rounded-xl border border-slate-200 shadow-sm focus:outline-none focus:ring-2 focus:ring-[#006233] focus:border-transparent transition-all text-sm"
@@ -348,7 +347,7 @@ export function Students({ onSelectStudent }: StudentsProps) {
                       </div>
                       <div>
                         <p className="font-semibold text-[#0e1f12]">{student.fullName}</p>
-                        <p className="text-[11px] font-mono text-slate-400 mt-0.5">CNE: {student.cne || 'N/A'}</p>
+                        <p className="text-[11px] font-mono text-slate-400 mt-0.5">CIN: {student.cne || 'N/A'}</p>
                       </div>
                     </div>
                   </td>
@@ -494,7 +493,7 @@ export function Students({ onSelectStudent }: StudentsProps) {
                   <input name="fullName" type="text" className="w-full px-4 py-2 border border-slate-200 rounded-xl bg-slate-50/50 focus:outline-none focus:ring-2 focus:ring-[#006233] text-sm" placeholder="Jean Dupont" defaultValue={editingStudent?.fullName} required />
                 </div>
                 <div>
-                  <label className="block text-xs font-bold uppercase tracking-wider text-slate-600 mb-2">CNE</label>
+                  <label className="block text-xs font-bold uppercase tracking-wider text-slate-600 mb-2">CIN</label>
                   <input
                     name="cne"
                     type="text"
@@ -503,7 +502,7 @@ export function Students({ onSelectStudent }: StudentsProps) {
                     defaultValue={editingStudent?.cne}
                     onInput={(e) => {
                       const val = (e.currentTarget as HTMLInputElement).value;
-                      setCneError(checkDuplicate('cne', val) ? 'CNE déjà utilisé par un autre étudiant' : null);
+                      setCneError(checkDuplicate('cne', val) ? 'CIN déjà utilisé par un autre étudiant' : null);
                     }}
                     required
                   />
