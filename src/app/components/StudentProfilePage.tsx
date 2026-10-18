@@ -332,6 +332,20 @@ export function StudentProfilePage({ studentId, onBack, onUpdateStudent }: Stude
 
         let normalizedStudent = normalizeStudent(normalizedStudentSource);
         try {
+          const gradeRows = await api.getModuleGradesByStudent(studentId);
+          const moduleGrades = gradeRows
+            .map((grade: any, index: number) => {
+              const moduleName = String(grade.module ?? grade.moduleName ?? grade.subject?.name ?? grade.name ?? `Module ${index + 1}`);
+              return normalizeModuleGrade(moduleName, grade);
+            })
+            .filter(Boolean) as ModuleGrade[];
+          if (moduleGrades.length > 0) {
+            normalizedStudent = { ...normalizedStudent, moduleGrades };
+          }
+        } catch {
+          // Keep grades from the student payload when the dedicated endpoint is unavailable.
+        }
+        try {
           const resolvedProgramId = normalizeApiId(normalizedStudent.programId);
           if (resolvedProgramId) {
             const [programResp, subjectsResp] = await Promise.all([api.getProgram(resolvedProgramId), api.getSubjects()]);
@@ -608,7 +622,7 @@ export function StudentProfilePage({ studentId, onBack, onUpdateStudent }: Stude
                 </tr>
               </thead>
               <tbody className="divide-y divide-slate-100">
-                {moduleGradeRows.map((row, index) => {
+                {moduleGradeRows.length > 0 ? moduleGradeRows.map((row, index) => {
                   const isSuccess = row.isValid !== false && (typeof row.grade === 'number' ? row.grade >= 10 : row.grade !== 'À rattraper');
                   return (
                     <tr key={`${row.name}-${index}`} className="hover:bg-[#fdf5f5] transition-colors">
@@ -633,7 +647,13 @@ export function StudentProfilePage({ studentId, onBack, onUpdateStudent }: Stude
                       </td>
                     </tr>
                   );
-                })}
+                }) : (
+                  <tr>
+                    <td colSpan={3} className="px-4 py-8 text-center text-xs text-slate-400">
+                      Aucun module ou résultat disponible pour cet étudiant.
+                    </td>
+                  </tr>
+                )}
               </tbody>
             </table>
           </div>
