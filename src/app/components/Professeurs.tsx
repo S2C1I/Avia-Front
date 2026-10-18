@@ -230,7 +230,7 @@ export function Professeurs() {
                   </div>
                   <div className="flex items-center gap-2 text-xs text-slate-500">
                     <IdCard className="w-3.5 h-3.5" />
-                    <span className="font-semibold text-slate-600">CNE :</span>
+                    <span className="font-semibold text-slate-600">CIN :</span>
                     <span>{professor.cne || '—'}</span>
                   </div>
                   <div className="flex items-center gap-2 text-xs text-slate-500">
@@ -341,12 +341,12 @@ export function Professeurs() {
               </div>
               <div className="grid grid-cols-2 gap-4">
                 <div>
-                  <label className="block text-xs font-semibold text-slate-600 mb-2 uppercase tracking-wider">CNE</label>
+                  <label className="block text-xs font-semibold text-slate-600 mb-2 uppercase tracking-wider">CIN</label>
                   <input
                     name="cne"
                     type="text"
                     className="w-full px-4 py-2.5 border border-slate-200 rounded-lg focus:outline-none focus:ring-2 focus:ring-[#006233] text-[#0e1f12] text-sm"
-                    placeholder="CNE-12345"
+                    placeholder="G123456"
                     defaultValue={editingTeacher?.cne}
                   />
                 </div>
