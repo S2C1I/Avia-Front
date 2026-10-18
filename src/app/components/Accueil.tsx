@@ -143,32 +143,13 @@ export function Accueil() {
       </div>
 
       <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
-        <div className="bg-gradient-to-br from-[#1a2e1e] via-[#123826] to-[#006233] rounded-2xl p-6 shadow-xl text-white relative overflow-hidden">
-          <div className="absolute top-0 right-0 w-32 h-32 bg-white/10 rounded-full -mr-16 -mt-16"></div>
-          <div className="absolute bottom-0 left-0 w-24 h-24 bg-white/10 rounded-full -ml-12 -mb-12"></div>
-          <div className="relative">
-            <Plane className="w-12 h-12 mb-4 opacity-90" />
-            <h4 className="text-2xl font-bold mb-2">Filière Pilote</h4>
-            <p className="text-white/80 text-sm mb-4">Formation pilotage professionnel</p>
-            <div className="flex items-end justify-between">
-              <div>
-                <p className="text-3xl font-bold">28</p>
-                <p className="text-white/70 text-xs mt-1">Étudiants actifs</p>
-              </div>
-              <div className="text-right">
-                <p className="text-lg font-semibold">16.2</p>
-                <p className="text-white/70 text-xs">Moyenne</p>
-              </div>
-            </div>
-          </div>
-        </div>
 
         <div className="bg-gradient-to-br from-[#C1272D] via-[#d93f46] to-[#e85259] rounded-2xl p-6 shadow-xl text-white relative overflow-hidden">
           <div className="absolute top-0 right-0 w-32 h-32 bg-white/20 rounded-full -mr-16 -mt-16"></div>
           <div className="absolute bottom-0 left-0 w-24 h-24 bg-white/20 rounded-full -ml-12 -mb-12"></div>
           <div className="relative">
             <Briefcase className="w-12 h-12 mb-4 opacity-90" />
-            <h4 className="text-2xl font-bold mb-2">Filière Steward</h4>
+            <h4 className="text-2xl font-bold mb-2">PMC</h4>
             <p className="text-white/80 text-sm mb-4">Personnel navigant commercial</p>
             <div className="flex items-end justify-between">
               <div>
@@ -188,7 +169,7 @@ export function Accueil() {
           <div className="absolute bottom-0 left-0 w-24 h-24 bg-white/10 rounded-full -ml-12 -mb-12"></div>
           <div className="relative">
             <Wrench className="w-12 h-12 mb-4 opacity-90" />
-            <h4 className="text-2xl font-bold mb-2">Filière Mécanique</h4>
+            <h4 className="text-2xl font-bold mb-2">TMA</h4>
             <p className="text-white/80 text-sm mb-4">Maintenance aéronautique</p>
             <div className="flex items-end justify-between">
               <div>
